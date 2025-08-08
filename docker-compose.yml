@@ -1,6 +1,6 @@
 services:
   immich:
-    image: ghcr.io/immich-app/immich-server:release
+    image: ghcr.io/immich-app/immich-server:v1.137.3
     container_name: immich
     restart: unless-stopped
     healthcheck:
@@ -31,9 +31,7 @@ services:
     ports:
       - 2283:2283
     volumes:
-      # Do not edit the next line. If you want to change the media storage location on your system, edit the value of UPLOAD_LOCATION in the .env file
-      # - ${UPLOAD_LOCATION}:/usr/src/app/upload
-      - /mnt/immich:/usr/src/app/upload
+      - /mnt/immich:/data
       - /etc/localtime:/etc/localtime:ro
     depends_on:
       - cache
