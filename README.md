@@ -7,5 +7,5 @@ Docker setup for running Immich behind a Traefik instance
 1. Make sure that Docker network `traefik` exists, `docker network ls`
 1. Run `docker compose up` and check logs
 
-## Authentik/Immich setup
-See relevant [Authentik](https://github.com/znibb/docker-authentik#45-immich) repo
+## Authentik setup
+See [Authentik](https://github.com/znibb/docker-authentik) repo
